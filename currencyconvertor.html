@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <div>
+            <img src="money.jpg" height="90px" width="90px">
+            <br><br>
+            <h2>Select currency</h2>
+            <select class="a" id="fromCurrency">
+                <option value="select">Select</option>
+                <option value="INR">&#8377; Rupees</option>
+                <option value="USD">&#36; Dollar</option>
+                <option value="EUR">&#8364; Euro</option>
+                <option value="GBP">&#163; Pound</option>
+                <option value="JPY">&#165; Yen</option>
+            </select>
+            <p class="arrow" style="font-size: 30px;">&#8658;</p>
+            <h2 class="c">Select currency</h2>
+            <select class="b" id="toCurrency">
+                <option value="select">Select</option>
+                <option value="INR">&#8377; Rupees</option>
+                <option value="USD">&#36; Dollar</option>
+                <option value="EUR">&#8364; Euro</option>
+                <option value="GBP">&#163; Pound</option>
+                <option value="JPY">&#165; Yen</option>
+            </select>
+            <br><br><br>
+            <h2>Enter the amount:</h2>
+            <input class="text1" type="text" placeholder="Enter the amount" id="amount" size="20px">
+            <br><br>
+            <input class="convert" type="button" value="Convert" onclick="convertCurrency()">
+            <br><br>
+            <input class="text" type="text" id="result" readonly>
+        </div>
+    </center>
+
+    <!-- JavaScript code directly in the HTML -->
+    <script>
+        function convertCurrency() {
+            var fromCurrency = document.getElementById('fromCurrency').value;
+            var toCurrency = document.getElementById('toCurrency').value;
+            var amount = parseFloat(document.getElementById('amount').value);
+            var result = document.getElementById('result');
+
+            if (fromCurrency === 'select' || toCurrency === 'select' || isNaN(amount)) {
+                result.value = "Please select both currencies and enter a valid amount.";
+                return;
+            }
+
+            var conversionRates = {
+                'INR': { 'USD': 0.012, 'EUR': 0.011, 'GBP': 0.009, 'JPY': 1.63, 'INR': 1 },
+                'USD': { 'INR': 83, 'EUR': 0.93, 'GBP': 0.78, 'JPY': 137, 'USD': 1 },
+                'EUR': { 'INR': 89, 'USD': 1.08, 'GBP': 0.84, 'JPY': 147, 'EUR': 1 },
+                'GBP': { 'INR': 105, 'USD': 1.28, 'EUR': 1.19, 'JPY': 174, 'GBP': 1 },
+                'JPY': { 'INR': 0.61, 'USD': 0.0073, 'EUR': 0.0068, 'GBP': 0.0057, 'JPY': 1 }
+            };
+
+            var convertedAmount = amount * conversionRates[fromCurrency][toCurrency];
+            result.value = `${convertedAmount.toFixed(2)} ${toCurrency}`;
+        }
+    </script>
+</body>
+</html>

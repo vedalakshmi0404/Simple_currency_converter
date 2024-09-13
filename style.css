@@ -1,0 +1,100 @@
+h2{
+    display: inline-block;
+
+color: rgb(1, 1, 63);
+    
+}
+.from{
+    padding-left: 155px;
+    color: rgb(1, 1, 63);
+
+}
+.to{
+    padding-left: 280;
+    color: rgb(1, 1, 63);
+
+}
+div{
+    width: 800px;
+    height: 500px;
+   
+    
+    
+   
+
+    
+}
+.a{
+    display: inline-block;
+    margin-top: px;
+    margin-left: 20px;
+    width: 150px;
+    font-size:large;
+    display: inline;
+    color: rgb(1, 1, 63);
+
+    
+
+}
+.b{
+    display: inline-block;
+    margin-top: px;
+    margin-left:5px;
+    width: 150px;
+    font-size:large;
+    display: inline;   
+    color: rgb(1, 1, 63);
+ 
+}
+h2{
+    display: inline-block;
+    margin-left: 10px;
+
+    color: rgb(1, 1, 63);
+
+    
+}
+.vl{
+    border-left: 3px solid rgb(1, 1, 63);
+  height: 140px;
+  margin-left: 125px;
+  position: absolute;
+  display: inline;
+  color: rgb(1, 1, 63);
+
+}
+.c{
+    padding-left: 1px;
+    display: inline-block;
+    color: rgb(1, 1, 63);
+
+}
+.convert{
+    display: block;
+    font-size: large;
+
+    color: rgb(1, 1, 63);
+
+}
+.text{
+    font-size: large;
+    color: rgb(1, 1, 63);
+
+}
+.text1{
+
+    font-size: medium;
+    
+
+}
+img{
+    display: inline;
+}
+.image{
+    display: inline;
+    padding-top: 20px;
+}
+.arrow{
+    display: inline;
+size: 100px;
+}
